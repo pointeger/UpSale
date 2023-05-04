@@ -3,7 +3,8 @@
   "description": "The Upsale module shows a popup banner when a customer proceeds to checkout with any product in cart.The popup banner shows the product of which sku is given in store configuration.",
   "require": {
     "php": ">=7.3",
-    "magento/framework": ">=103"
+    "magento/framework": ">=103",
+    "pointeger/magento2-module-core" : "*"
   },
   "type": "magento2-module",
   "license": "proprietary",
