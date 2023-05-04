@@ -1,0 +1,257 @@
+#upsell-underlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2147483646;
+  display: none;
+}
+
+.modal-popup._inner-scroll .modal-content {
+  overflow-y: visible;
+}
+
+.modal-popup._inner-scroll .modal-inner-wrap {
+  height: 411px;
+}
+
+#upsell-container {
+  position: unset;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  display: block;
+}
+
+#close-icon {
+  display: none;
+  position: absolute;
+  top: -26px;
+  right: -24px;
+  font-family: din, sans-serif;
+  font-size: 24px;
+  line-height: normal;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: -0.3px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  margin: 0;
+}
+
+.upsell-block {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  margin-right: -4px;
+  height: 100%;
+  text-align: center;
+  max-height: auto;
+}
+
+.upsell-block.bg {
+  background-color: #f4f4f6;
+}
+
+#upsell-image {
+  display: inline-block;
+  max-width: 70%;
+  margin: 20px auto 0;
+  vertical-align: middle;
+}
+
+#upsell-block-inner {
+  border: 5px solid #f9e91c;
+  margin: 0 20px;
+}
+
+#dont-miss-out {
+  font-family: din, sans-serif;
+  font-size: 26px;
+  line-height: normal;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: -0.3px;
+  text-align: center;
+  color: #003365;
+  margin: 0;
+}
+
+#upsell-product {
+  font-family: din, sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: -0.3px;
+  text-align: center;
+  color: #003365;
+  margin: 0;
+  margin-top: 36px;
+}
+
+.upsell-accept {
+  display: block;
+  width: 160px;
+  height: 50px;
+  background-color: #013a70 !important;
+  font-family: din, sans-serif;
+  font-size: 16px;
+  line-height: 50px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  cursor: pointer;
+  color: white !important;
+  border-radius: 0;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 36px;
+}
+
+.no-thanks {
+  font-family: din, sans-serif;
+  font-size: 17px;
+  line-height: normal;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: -0.3px;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #003365;
+  margin: 0;
+  margin-top: 12px;
+}
+
+#mobile-upsell-block {
+  display: none;
+  text-align: center;
+}
+
+#mobile-upsell-image {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+  width: 200px;
+  margin-top: 12px;
+}
+
+@media screen and (max-width: 860px) {
+  /*#upsell-container {
+    width: 660px;
+    height: 330px;
+  }
+*/
+  #upsell-block-inner {
+    padding: 22px 0;
+  }
+
+  #upsell-product {
+    margin-top: 24px;
+  }
+
+  .upsell-accept {
+    margin-top: 24px;
+  }
+
+  .no-thanks {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  #close-icon {
+    font-size: 20px;
+    top: -24px;
+    right: 4px;
+  }
+
+  .upsell-block {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+  .upsell-block:not(.bg) {
+    display: none;
+  }
+
+  .upsell-block.bg {
+    padding: 10px 16px;
+  }
+
+  #upsell-block-inner {
+    margin: 0;
+  }
+
+  #dont-miss-out {
+    font-size: 22px;
+  }
+
+  #upsell-product {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 20px;
+  }
+
+  #upsell-block-inner .upsell-accept, #upsell-block-inner .no-thanks {
+    display: none;
+  }
+
+  #mobile-upsell-block {
+    display: block;
+  }
+
+  .upsell-accept {
+    margin-top: 20px;
+  }
+
+  .no-thanks {
+    margin-top: 6px;
+  }
+}
+
+@media screen and (min-width: 813px) {
+  .popup-upsale {
+    header.modal-header {
+      padding: 0 !important;
+    }
+
+    &.modal-slide .action-close {
+      padding: 0;
+    }
+
+    &.modal-slide .action-close {
+      margin-right: -25px;
+      margin-top: -25px;
+    }
+
+    &.modal-slide .action-close:before {
+      color: white;
+    }
+
+    &.modal-popup .modal-inner-wrap {
+      max-width: 800px;
+      width: 100%;
+    }
+
+    #upsell-inner {
+      padding-top: 30px;
+    }
+
+    div#upsell-block-inner {
+      margin: 0;
+      padding: 30px 25px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<?php
+/** @var $block \Magento\Checkout\Block\Onepage\Link */
+?>
+<?php
+
+use Magento\Framework\Escaper;
+
+/**
+ * @var $upSaleModel \Pointeger\UpSale\ViewModel\UpSale
+ * * @var Escaper $escaper
+ */
+$upSaleModel = $block->getUpSale();
+$product = $upSaleModel->getProductData();
+?>
+<?php
+if ($product): ?>
+    <div id='upSaleProductPopup' data-bind="scope: 'upSaleProductPopup'">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <script type="text/x-magento-init">
+            {
+               "#upSaleProductPopup":{
+                  "Magento_Ui/js/core/app":{
+                     "components":{
+                        "upSaleProductPopup":{
+                           "component":"Pointeger_UpSale/js/view/up-sale-popup",
+                           "product_id":"<?= $product['id'] ?>",
+                           "productName":"<?= $product['name'] ?>",
+                           "image":"<?= $product['image'] ?>",
+                           "price":"<?= $product['price'] ?>",
+                           "submitUrl":"<?= $product['submitUrl'] ?>",
+                           "upSaleSku":"<?= $product['upSaleSku'] ?>"
+                        }
+                     }
+                  }
+               }
+            }
+        </script>
+    </div>
+<?php
+endif; ?>

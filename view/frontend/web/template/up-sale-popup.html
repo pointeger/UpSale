@@ -1,0 +1,48 @@
+<div class="upsale-popup" afterRender="setModalElement">
+    <form data-bind="attr:{action: submitUrl}" method='post' id='product_addtocart_form'
+          novalidate='novalidate'>
+        <div id='upsell-container'>
+            <p id='close-icon' class='close-upsell'>X</p>
+            <div id='upsell-inner'>
+                <div class='upsell-block'>
+                    <img id='upsell-image' data-bind="attr:{src: image}">
+                </div>
+
+                <div class='upsell-block bg'>
+                    <div id='upsell-block-inner'>
+                        <h2 id='dont-miss-out'>
+                            <!-- ko i18n: 'DON\'T MISS OUT!' --><!-- /ko -->
+                        </h2>
+
+                        <p id='upsell-product'>
+                            <span><!-- ko i18n: 'Add' --><!-- /ko --></span>
+                            <span data-bind="html: productName"></span>
+                            <br/>
+                            <span><!-- ko i18n: 'FOR ONLY' --><!-- /ko --></span>
+                            <span data-bind="html: price"></span>!
+                        </p>
+                        <input type='hidden' name='product' data-bind="attr:{src: product_id}">
+                        <input type='hidden' name='qty' value='1'>
+                        <button type='submit' class='upsell-accept'>
+                            <!-- ko i18n: 'ADD TO CART' --><!-- /ko -->
+                        </button>
+                        <p class='no-thanks close-upsell' data-bind="click: continueToCheckout">
+                            <!-- ko i18n: 'No thanks' --><!-- /ko -->
+                        </p>
+                    </div>
+                </div>
+
+                <div id='mobile-upsell-block'>
+                    <img id='mobile-upsell-image' data-bind="attr:{src: image}">
+                    <button type='submit' class='upsell-accept'>
+                        <!-- ko i18n: 'ADD TO CART' --><!-- /ko -->
+                    </button>
+                    <p class='no-thanks close-upsell'
+                       data-bind="click: continueToCheckout">
+                        <!-- ko i18n: 'No thanks' --><!-- /ko -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
